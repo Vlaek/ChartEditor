@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "reactflow": "^11.11.4",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.6.12",
