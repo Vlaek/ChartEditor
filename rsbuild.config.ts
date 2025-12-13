@@ -1,7 +1,32 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+import { pluginLess } from '@rsbuild/plugin-less';
 
-// Docs: https://rsbuild.rs/config/
 export default defineConfig({
-  plugins: [pluginReact()],
+    plugins: [
+        pluginReact(),
+        pluginLess({
+            lessLoaderOptions: {
+                lessOptions: {
+                    javascriptEnabled: true,
+                    math: 'always',
+                },
+            },
+        }),
+    ],
+    source: {
+        entry: {
+            index: './src/Bootstrap/index.tsx',
+        },
+    },
+    resolve: {
+        alias: {
+            '@Bootstrap': './src/Bootstrap',
+            '@Common': './src/Common',
+            '@Entities': './src/Entities',
+        },
+    },
+    html: {
+        title: 'Редактор диаграмм',
+    },
 });

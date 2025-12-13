@@ -1,24 +1,47 @@
 {
-  "name": "ChartEditor",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "rsbuild build",
-    "dev": "rsbuild dev --open",
-    "preview": "rsbuild preview"
-  },
-  "dependencies": {
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "reactflow": "^11.11.4",
-    "zustand": "^4.5.0"
-  },
-  "devDependencies": {
-    "@rsbuild/core": "^1.6.12",
-    "@rsbuild/plugin-react": "^1.4.2",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.3"
-  }
+    "name": "ChartEditor",
+    "author": "Vladislav Eichwald (@Vlaeek)",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "homepage": "https://github.com/Vlaeek/ChartEditor",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Vlaek/ChartEditor"
+    },
+    "scripts": {
+        "dev": "rsbuild dev",
+        "build": "rsbuild build",
+        "preview": "rsbuild preview",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+        "type-check": "tsc --noEmit"
+    },
+    "dependencies": {
+        "classnames": "^2.5.1",
+        "react": "^19.2.1",
+        "react-dom": "^19.2.1",
+        "reactflow": "^11.11.4",
+        "zustand": "^4.5.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "@rsbuild/core": "^1.6.12",
+        "@rsbuild/plugin-less": "^1.5.0",
+        "@rsbuild/plugin-react": "^1.4.2",
+        "@types/classnames": "^2.3.0",
+        "@types/react": "^19.2.7",
+        "@types/react-dom": "^19.2.3",
+        "@typescript-eslint/eslint-plugin": "^8.49.0",
+        "@typescript-eslint/parser": "^8.49.0",
+        "eslint": "^9.39.2",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "eslint-plugin-react-refresh": "^0.4.24",
+        "less": "^4.4.2",
+        "less-loader": "^12.3.0",
+        "typescript": "^5.9.3"
+    }
 }

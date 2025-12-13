@@ -1,0 +1,48 @@
+@import '@Common/Styles/Variables.less';
+
+.toolbar {
+    background: @bg-white;
+    border-bottom: 1px solid @bg-medium-gray;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__group {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__btn {
+        padding: 8px 16px;
+        background: @btn-confirm;
+        color: @bg-white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &:hover:not(:disabled) {
+            background: @btn-confirm-hover;
+            transform: translateY(-1px);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &--danger {
+            background: @btn-danger;
+
+            &:hover:not(:disabled) {
+                background: @btn-danger-hover;
+            }
+        }
+    }
+}

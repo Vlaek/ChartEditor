@@ -1,0 +1,77 @@
+@import '@Common/Styles/Variables.less';
+
+.sidebar {
+    width: 220px;
+    background: @bg-white;
+    border-right: 1px solid @bg-medium-gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: @font-dark;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.shape {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 16px;
+        background: @bg-white;
+        border: 2px solid @bg-medium-gray;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+
+        &:hover:not(.disabled) {
+            border-color: @bg-blue;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px @shadow-dark;
+        }
+
+        &--disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: @bg-medium-gray;
+        }
+    }
+
+    &__preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__info {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    &__label {
+        font-weight: 500;
+        color: @font-dark;
+    }
+
+    &__count {
+        color: @font-dark-gray;
+        font-weight: 600;
+        position: absolute;
+        right: 15px;
+    }
+}
