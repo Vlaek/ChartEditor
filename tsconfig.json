@@ -15,7 +15,7 @@
         "module": "ESNext",
         "moduleDetection": "force",
         "moduleResolution": "bundler",
-        "verbatimModuleSyntax": true,
+        "verbatimModuleSyntax": false,
         "resolveJsonModule": true,
         "allowImportingTsExtensions": true,
         "noUncheckedSideEffectImports": true,
@@ -23,6 +23,9 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "typeRoots": ["./node_modules/@types", "src/Types"],
+        "esModuleInterop": true,
+        "declaration": false,
+        "types": ["jest", "node"]
     },
     "include": [
         "src",
