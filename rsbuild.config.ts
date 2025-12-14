@@ -29,4 +29,10 @@ export default defineConfig({
     html: {
         title: 'Редактор диаграмм',
     },
+    output: {
+        distPath: {
+            root: 'dist',
+        },
+        assetPrefix: process.env.NODE_ENV === 'production' ? './' : '/',
+    },
 });

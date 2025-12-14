@@ -15,7 +15,9 @@
         "preview": "rsbuild preview",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-        "test": "jest"
+        "test": "jest",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "classnames": "^2.5.1",
@@ -41,6 +43,7 @@
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.0.1",
         "eslint-plugin-react-refresh": "^0.4.24",
+        "gh-pages": "^6.3.0",
         "jest": "^30.2.0",
         "jest-environment-jsdom": "^30.2.0",
         "less": "^4.4.2",
